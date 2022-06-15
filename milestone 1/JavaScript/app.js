@@ -168,5 +168,12 @@ new Vue ({
 
     data: {
       list: contatti,
+      activeContact: "",
+    },
+
+    methods: {
+      activeUser(contact) {
+        this.activeUser = contact;
+      },
     }
 })

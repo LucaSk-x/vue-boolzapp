@@ -15,8 +15,8 @@
     <div class="my-bg"></div>
     <div id="app">
         <div class="container my-container ">
-            <div class="my-row">
-                <div class="mycol-sm"> <!-- small col left -->
+            <div class="row">
+                <div class="col-5"> <!-- small col left -->
                     <div class="contact-container d-flex flex-column">
                         <div class="info-contact">
                             <div class="user-info d-flex justify-content-between  p-2"> <!-- information user -->
@@ -52,7 +52,7 @@
                         </div>
                         <div class="list-contact p-2">
                             <ul class="list-group list-group-flush">
-                                <li class="d-flex align-items-center list-group-item" v-for="(item, i) in list">
+                                <li class="d-flex align-items-center list-group-item" v-for="(item, i) in list" @click="activeUser(item)">
                                     <div class="avatar-list-chat">
                                         <img class="w-100" :src="'../img/avatar' + item.avatar + '.jpg'" alt="">
                                     </div>
@@ -65,9 +65,38 @@
                         </div>
                     </div>
                 </div>
-                <div class="mycol-lg"><!-- big col right -->
-                    <div class="chat-container">
-
+                <div class="col-7"><!-- big col right -->
+                    <div v-if="this.activeContact" class="chat-container d-flex flex-column h-100">
+                        <div class="chat-info d-flex justify-content-between p-2 ">
+                            <div class="chat-info-left d-flex">
+                                <div class="img-contain pe-2">
+                                    <img class="w-100 rounded-circle" :src="'../img/avatar' + activeContact.avatar + '.jpg'" alt="">
+                                </div>
+                                <div class="recipient">
+                                    <div>{{activeContact.name}}</div>
+                                    <div>Ultimo accesso</div>
+                                </div>
+                            </div>
+                            <div class="chat-info-right d-flex align-items-center">
+                                <i class="fa-solid fa-magnifying-glass text-secondary"></i>
+                                <i class="fa-solid fa-paperclip text-secondary"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary"></i>
+                            </div>
+                        </div>
+                        <div class="message-chat overflow-auto flex-grow-1"></div>
+                        <div class="write-message d-flex align-items-center">
+                            <div class="emoji">
+                                <i class="fa-solid fa-face-smile text-secondary py-2 px-4"></i>
+                            </div>
+                            <div class="text-input flex-grow-1 p-1">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            </div>
+                            <div class="vocal">
+                                <i class="fa-solid fa-microphone text-secondary py-2 px-4"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

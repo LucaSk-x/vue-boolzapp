@@ -44,7 +44,7 @@ body {
     
 }
 
-.my-row {
+.row {
     height: 100%;
     overflow: hidden;
 }
@@ -55,8 +55,13 @@ body {
     overflow: hidden;
 }
 
-.mycol-lg {
-    width: calc((100% / 12) * 7);
+.col-7 {
+    padding-left: 0;
+    
+}
+
+.col-5 {
+    padding-right: 0;
 }
 
 .contact-container {
@@ -73,10 +78,6 @@ body {
 
 .user-info, .notifications {
     flex-shrink: 0;
-}
-
-.avatar-contain {
-    width: 50px;
 }
 
 .avatar-contain img {
@@ -129,15 +130,17 @@ span#inputGroup-sizing-default i {
 
 /* list-contact */
 /* ************* */
+
 .list-contact{
     overflow: auto;
     flex-grow: 1;
     height: 100%;
 }
 
-.avatar-list-chat {
-    width: 45px;
+.avatar-list-chat img, .img-contain img, .avatar-contain img {
+    height: 45px;
 }
+
 .avatar-list-chat img {
     border-radius: 50%;
     overflow: hidden;
@@ -155,4 +158,29 @@ span#inputGroup-sizing-default i {
 
 .info-list-contact {
     font-size: var(--font-size);
+}
+ /* right col */
+/* ********** */
+
+.chat-container {
+    border-left: 1px solid rgb(202, 201, 201);
+}
+
+.recipient {
+    font-size: var(--font-size);
+}
+
+.chat-info, .write-message {
+    background-color: var(--back-grey);
+
+}
+
+.chat-info-right i {
+    padding: 8px;
+}
+
+/* message-chat */
+
+.message-chat {
+    background-image: url(../../img/mine.jpg);
 }
