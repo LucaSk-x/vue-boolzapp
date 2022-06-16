@@ -202,9 +202,13 @@ new Vue ({
           )
         },
 
-        filterUser() {
-          console.log(this.list.filter(this.filterName));
-        }
+        filterUser(searchName) {
+          console.log(this.filterName);
+          const save= this.list.filter((filtered) =>{
+            return filtered.name.toLowerCase().includes(searchName.toLowerCase())
+          })
+          console.log(save);
+        },
     },
 })
 

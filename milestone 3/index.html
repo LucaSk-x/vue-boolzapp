@@ -44,7 +44,7 @@
                             <div class="search p-2">
                                 <div class="input-group">
                                     <div class="input-group-prepend"> <!-- button filter -->
-                                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass text-secondary" @click="filterUser" ></i></span>
+                                        <span class="input-group-text" id="inputGroup-sizing-default"  @click="filterUser(filterName)"><i class="fa-solid fa-magnifying-glass text-secondary" ></i></span>
                                     </div>
                                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inzia una nuova chat"  v-model="filterName">
                             </div>
