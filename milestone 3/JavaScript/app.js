@@ -202,8 +202,8 @@ new Vue ({
           )
         },
 
-        filterUser(search) {
-          return this.list.filter(this.filterName);
+        filterUser() {
+          console.log(this.list.filter(this.filterName));
         }
     },
 })
