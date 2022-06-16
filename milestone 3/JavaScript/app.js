@@ -171,6 +171,7 @@ new Vue ({
       currentUser: contatti[0],
       inputText: "",
       filterName: "",
+      save: "",
     },
 
     methods: {
@@ -203,11 +204,12 @@ new Vue ({
         },
 
         filterUser(searchName) {
+          this.list = contatti;
           console.log(this.filterName);
-          const save= this.list.filter((filtered) =>{
+          this.save= this.list.filter((filtered) =>{
             return filtered.name.toLowerCase().includes(searchName.toLowerCase())
           })
-          console.log(save);
+          this.list = this.save;
         },
     },
 })

@@ -46,7 +46,7 @@
                                     <div class="input-group-prepend"> <!-- button filter -->
                                         <span class="input-group-text" id="inputGroup-sizing-default"  @click="filterUser(filterName)"><i class="fa-solid fa-magnifying-glass text-secondary" ></i></span>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inzia una nuova chat"  v-model="filterName">
+                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Cerca o inzia una nuova chat"  v-model="filterName" v-on:keyup.enter="filterUser(filterName)">
                             </div>
                             </div>
                         </div>
